@@ -3,8 +3,8 @@
   "name": "El Qilin Negro — Grimorio",
   "short_name": "Qilin Negro",
   "description": "Grimorio, validador gramatical y simulador interactivo del sistema de magia de El Qilin Negro.",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "lang": "es",
   "dir": "ltr",
   "display": "standalone",
@@ -20,11 +20,11 @@
   "protocol_handlers": [
     {
       "protocol": "web+qilin",
-      "url": "/?spell=%s"
+      "url": "./?spell=%s"
     }
   ],
   "share_target": {
-    "action": "/?share",
+    "action": "./?share",
     "method": "GET",
     "enctype": "application/x-www-form-urlencoded",
     "params": {
@@ -44,14 +44,14 @@
       "type": "application/json",
       "icons": [
         {
-          "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-192.png",
+          "src": "icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
       ],
       "screenshots": [
         {
-          "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/screenshot_mobile.jpg",
+          "src": "screenshot_mobile.jpg",
           "sizes": "896x1200",
           "type": "image/jpeg",
           "label": "Vista de Widget"
@@ -63,7 +63,7 @@
     "preferred_width": 480
   },
   "note_taking": {
-    "new_note_url": "/?tab=grimorio&action=new-note"
+    "new_note_url": "./?tab=grimorio&action=new-note"
   },
   "categories": [
     "books",
@@ -79,36 +79,32 @@
       "id": "com.qilinnegro.grimorio"
     }
   ],
-  "scope_extensions": [
-    { "origin": "https://ais-dev-k5snlyatmkgykpv7gi2jo6-49917330169.us-east1.run.app" },
-    { "origin": "https://ais-pre-k5snlyatmkgykpv7gi2jo6-49917330169.us-east1.run.app" }
-  ],
   "shortcuts": [
     {
       "name": "Grimorio",
       "short_name": "Grimorio",
       "description": "Explora el grimorio de hechizos y léxicos",
-      "url": "/?tab=grimorio",
-      "icons": [{ "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-192.png", "sizes": "192x192" }]
+      "url": "./?tab=grimorio",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Rituales de Conjuración",
       "short_name": "Rituales",
       "description": "Inicia un nuevo ritual de conjuración de hechizos",
-      "url": "/?tab=conjuracion",
-      "icons": [{ "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-192.png", "sizes": "192x192" }]
+      "url": "./?tab=conjuracion",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
     }
   ],
   "file_handlers": [
     {
-      "action": "/?open-file",
+      "action": "./?open-file",
       "accept": {
         "application/json": [".json"],
         "text/plain": [".txt", ".qilin"]
       },
       "icons": [
         {
-          "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-192.png",
+          "src": "icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -122,19 +118,19 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-192.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon.png",
+      "src": "icon.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any"
@@ -142,14 +138,14 @@
   ],
   "screenshots": [
     {
-      "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/screenshot_mobile.jpg",
+      "src": "screenshot_mobile.jpg",
       "sizes": "896x1200",
       "type": "image/jpeg",
       "form_factor": "narrow",
       "label": "Grimorio de Hechizos en Celular"
     },
     {
-      "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/screenshot_desktop.jpg",
+      "src": "screenshot_desktop.jpg",
       "sizes": "1376x768",
       "type": "image/jpeg",
       "form_factor": "wide",

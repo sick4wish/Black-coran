@@ -12,7 +12,9 @@ createRoot(document.getElementById('root')!).render(
 // Register service worker for installable PWA behavior on Android
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    const base = (import.meta as any).env?.BASE_URL || '/';
+    const swUrl = base.endsWith('/') ? `${base}sw.js` : `${base}/sw.js`;
+    navigator.serviceWorker.register(swUrl)
       .then((reg) => console.log('Service Worker registered successfully:', reg.scope))
       .catch((err) => console.error('Service Worker registration failed:', err));
   });
