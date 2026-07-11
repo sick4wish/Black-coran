@@ -44,14 +44,14 @@
       "type": "application/json",
       "icons": [
         {
-          "src": "/icon-192.png",
+          "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
       ],
       "screenshots": [
         {
-          "src": "/screenshot_mobile.jpg",
+          "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/screenshot_mobile.jpg",
           "sizes": "896x1200",
           "type": "image/jpeg",
           "label": "Vista de Widget"
@@ -89,14 +89,14 @@
       "short_name": "Grimorio",
       "description": "Explora el grimorio de hechizos y léxicos",
       "url": "/?tab=grimorio",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Rituales de Conjuración",
       "short_name": "Rituales",
       "description": "Inicia un nuevo ritual de conjuración de hechizos",
       "url": "/?tab=conjuracion",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-192.png", "sizes": "192x192" }]
     }
   ],
   "file_handlers": [
@@ -108,7 +108,7 @@
       },
       "icons": [
         {
-          "src": "/icon-192.png",
+          "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -122,19 +122,19 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-512.png",
+      "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon.png",
+      "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/icon.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any"
@@ -142,14 +142,14 @@
   ],
   "screenshots": [
     {
-      "src": "/screenshot_mobile.jpg",
+      "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/screenshot_mobile.jpg",
       "sizes": "896x1200",
       "type": "image/jpeg",
       "form_factor": "narrow",
       "label": "Grimorio de Hechizos en Celular"
     },
     {
-      "src": "/screenshot_desktop.jpg",
+      "src": "https://raw.githubusercontent.com/sick4wish/Black-coran/main/public/screenshot_desktop.jpg",
       "sizes": "1376x768",
       "type": "image/jpeg",
       "form_factor": "wide",
