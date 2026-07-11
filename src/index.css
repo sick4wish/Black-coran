@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom visual additions for spellcasting ripples and parchment filters */
+.glow-violet {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
+}
+
+.glow-scarlet {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.25);
+}
+
+.ink-well-bubble {
+  animation: inkBubble 4s ease-in-out infinite alternate;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #090706;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #3f2f25;
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #5c4436;
+}
+
+/* Screenshake Animation */
+@keyframes shake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  10% { transform: translate(-4px, -2px) rotate(-1deg); }
+  20% { transform: translate(3px, 4px) rotate(1deg); }
+  30% { transform: translate(-3px, 1px) rotate(-0.5deg); }
+  40% { transform: translate(4px, -1px) rotate(1deg); }
+  50% { transform: translate(-2px, 3px) rotate(-1deg); }
+  60% { transform: translate(3px, 2px) rotate(0.5deg); }
+  70% { transform: translate(-4px, -3px) rotate(-1deg); }
+  80% { transform: translate(2px, 3px) rotate(1deg); }
+  90% { transform: translate(-1px, -2px) rotate(-0.5deg); }
+}
+
+.animate-shake {
+  animation: shake 0.45s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Pulse Glows */
+@keyframes pulse-violet {
+  0%, 100% { box-shadow: 0 0 15px rgba(139, 92, 246, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(139, 92, 246, 0.55); }
+}
+.animate-pulse-violet {
+  animation: pulse-violet 2s infinite ease-in-out;
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(245, 158, 11, 0.55); }
+}
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite ease-in-out;
+}
+
+@keyframes inkBubble {
+  0% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  }
+  50% {
+    border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
+  }
+  100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  }
+}
+
+/* Mystic Animated Fog / Mist Effect */
+@keyframes fogMove {
+  0% {
+    background-position: 0% 50%;
+    transform: scale(1) translate(0px, 0px);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(1.15) translate(4px, -3px);
+  }
+  100% {
+    background-position: 0% 50%;
+    transform: scale(1) translate(0px, 0px);
+  }
+}
+
+.mystic-fog-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.mystic-fog-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.04) 0%, transparent 55%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.015) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.015) 50%, rgba(255, 255, 255, 0.015) 75%, transparent 75%, transparent);
+  background-size: 300% 300%;
+  animation: fogMove 10s infinite linear;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.85;
+  filter: blur(2px);
+  mix-blend-mode: screen;
+}
+
+/* On hover, the mystical mist parts, and the card's real characters and neon glow emerge with high-fidelity clarity */
+.mystic-fog-container:hover .mystic-fog-overlay {
+  opacity: 0;
+  transform: scale(1.4) translateY(-14px);
+  filter: blur(6px);
+}
+
+/* ANDROID MOBILE OVERRIDES (Optimized for Motorola Moto e40 / Android 11) */
+@layer base {
+  body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+    overscroll-behavior-y: contain; /* Prevents pull-to-refresh scrolling in Chrome */
+  }
+
+  /* Exclude text inputs and content fields so the user can still type */
+  input, textarea, [contenteditable="true"] {
+    user-select: text !important;
+  }
+
+  /* Make touch targets comfortable and responsive */
+  button, a {
+    touch-action: manipulation;
+  }
+}
+
+
