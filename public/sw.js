@@ -1,13 +1,13 @@
 const CACHE_NAME = 'qilin-negro-v1';
 const ASSETS_TO_CACHE = [
-  './',
-  'index.html',
-  'manifest.json',
-  'icon.png',
-  'icon-192.png',
-  'icon-512.png',
-  'screenshot_mobile.jpg',
-  'screenshot_desktop.jpg'
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/icon.png',
+  '/icon-192.png',
+  '/icon-512.png',
+  '/screenshot_mobile.jpg',
+  '/screenshot_desktop.jpg'
 ];
 
 // Install Event
@@ -65,7 +65,7 @@ self.addEventListener('fetch', (event) => {
           }
           // If not found in cache, return index.html for SPA routes
           if (event.request.headers.get('accept').includes('html')) {
-            return caches.match('./');
+            return caches.match('/');
           }
         });
       })
